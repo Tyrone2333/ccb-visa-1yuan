@@ -7,7 +7,7 @@ cron:0 8-18 * * * ccb-visa-1yuan.js
 
 */
 
-
+const $ = new Env('建行全球支付Visa卡一元购商品库存监控')
 const axios = require('axios')
 const sendNotify = require('../sendNotify')
 // 需要监控的商品名称列表
