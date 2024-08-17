@@ -62,6 +62,8 @@ async function checkGoodsList() {
       // axios.post(notifyUrl + `/${title}/${contents}`, {}).catch(error => {
       //   console.error('Error sending notification:', error)
       // });
+    } else {
+      console.log('均已售罄')
     }
 
   } catch (error) {
