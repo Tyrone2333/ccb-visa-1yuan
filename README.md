@@ -11,7 +11,7 @@
 类型：公开仓库
 链接：https://github.com/Tyrone2333/ccb-visa-1yuan.git
 定时类型：crontab
-定时规则：1 1 1 * *
+定时规则：1 1 * * *
 ```
 
 ## 规则变量
