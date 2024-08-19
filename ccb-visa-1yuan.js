@@ -42,14 +42,19 @@ async function checkGoodsList() {
 
     // 用于存储需要发送提醒的商品信息
     let notifyMessages = []
+    let inStockItems = []
 
     // 查找匹配的商品
     items.forEach(item => {
-      if (targetItems.includes(item.name) && item.stockStatus === '0') {
-        let content = `商品 "${item.name}" 现货有库存!`
-        notifyMessages.push(content)
+      if (item.stockStatus === '0') {
+        inStockItems.push(item.name)
+        if (targetItems.includes(item.name)) {
+          let content = `商品 "${item.name}" 现货有库存!`
+          notifyMessages.push(content)
+        }
       }
     })
+    console.log('有库存的商品: ', inStockItems)
 
     // 合并发送提醒
     if (notifyMessages.length > 0) {
@@ -63,7 +68,7 @@ async function checkGoodsList() {
       //   console.error('Error sending notification:', error)
       // });
     } else {
-      console.log('均已售罄')
+      console.log('监控商品均已售罄')
     }
 
   } catch (error) {
