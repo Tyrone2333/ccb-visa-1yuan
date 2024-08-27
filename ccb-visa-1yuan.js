@@ -3,7 +3,7 @@
 
 链接：https://github.com/Tyrone2333/ccb-visa-1yuan
 
-cron:0 8-12 * * *
+cron:1 8-12 * * *
 
 */
 
