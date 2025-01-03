@@ -38,8 +38,10 @@ async function checkGoodsList() {
       },
     })
 
+    console.log(response.data?.msg)
     // 处理响应数据
-    const items = response.data.data.goodsList
+    const items = response.data?.data?.goodsList || []
+
 
     // 用于存储需要发送提醒的商品信息
     let notifyMessages = []
